@@ -696,3 +696,31 @@ footer {
     text-align: center;
   }
 }
+/* CLICKABLE PROJECT CARDS FIX */
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Hover arrow indicator */
+.project-card::after {
+  content: "→";
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  opacity: 0;
+  transition: 0.2s ease;
+}
+
+/* Hover effect */
+.project-card:hover::after {
+  opacity: 1;
+  transform: translateX(6px);
+}
+
+/* Slight lift effect */
+.project-card:hover {
+  transform: translateY(-3px);
+}

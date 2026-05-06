@@ -35,7 +35,7 @@
         3. vuoden ICT-insinööriopiskelija JAMKissa. 
         <br>Rakennan osaamista laajasti ICT-alalta —
         verkot, järjestelmät, kyberturvallisuus ja ohjelmistokehitys.
-        Haen harjoittelu- tai työpaikkaa jossa pääsen oppimaan käytännössä.
+        Haen harjoittelu- tai työpaikkaa, jossa pääsen oppimaan käytännössä.
       </p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">→ projektit</a>
@@ -128,7 +128,7 @@
       <div class="skill-cell">
         <div class="skill-cat">OHJELMOINTI</div>
         <div class="skill-name">Tietorakenteet & algoritmit</div>
-        <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+        <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
       </div>
       <div class="skill-cell">
         <div class="skill-cat">DATABASE</div>
@@ -138,7 +138,7 @@
       <div class="skill-cell">
         <div class="skill-cat">DATA & AI</div>
         <div class="skill-name">Data-analytiikka & tekoäly</div>
-        <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+        <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
       </div>
       <div class="skill-cell">
         <div class="skill-cat">INFRA</div>
@@ -157,57 +157,89 @@
 
   <!-- PROJECTS -->
   <section id="projects">
-    <div class="reveal">
-      <p class="section-label">portfolioprojektit</p>
-      <h2 class="section-title">Projects</h2>
-    </div>
-    <div class="projects-grid">
-      <div class="project-card reveal">
-        <div class="project-num">01 / BACKEND · SECURITY</div>
-        <div class="project-title">Vulnerability Scanner API</div>
-        <div class="project-desc">
-          Asynkroninen haavoittuvuusskanneri RESTful API:lla. Skannaa URL-osoitteita,
-          tallentaa tulokset SQLite-tietokantaan ja tarjoaa historiakyselyn.
-          Rakennettu kurssiprojektina (TT00CD85-3004).
-        </div>
-        <div class="project-tags">
-          <span class="tag accent">FastAPI</span>
-          <span class="tag">Python</span>
-          <span class="tag">SQLAlchemy async</span>
-          <span class="tag">httpx</span>
-          <span class="tag">SQLite</span>
-        </div>
+  <div class="reveal">
+    <p class="section-label">portfolioprojektit</p>
+    <h2 class="section-title">Projects</h2>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- PROJECT 1 -->
+    <a href="https://github.com/NullHead87/Vuln-Scanner"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="project-card reveal">
+
+      <div class="project-num">01 / BACKEND · SECURITY</div>
+      <div class="project-title">Vulnerability Scanner API</div>
+
+      <div class="project-desc">
+        Asynkroninen haavoittuvuusskanneri RESTful API:lla. Skannaa URL-osoitteita,
+        tallentaa tulokset SQLite-tietokantaan ja tarjoaa historiakyselyn.
       </div>
-      <div class="project-card reveal">
-        <div class="project-num">02 / SECURITY · TOOLING</div>
-        <div class="project-title">OWASP Security Toolkit</div>
-        <div class="project-desc">
-          Offline-käyttöinen, yhden HTML-tiedoston tietoturvatyökalupaketti
-          noin 20 työkalulla: hash-laskuri, enkooderi, JWT-analysaattori,
-          SQL/XSS-payload-generaattorit ja muuta.
-        </div>
-        <div class="project-tags">
-          <span class="tag accent">HTML/CSS/JS</span>
-          <span class="tag">OWASP</span>
-          <span class="tag">Offline-first</span>
-          <span class="tag">Single-file</span>
-        </div>
+
+      <div class="project-tags">
+        <span class="tag accent">FastAPI</span>
+        <span class="tag">Python</span>
+        <span class="tag">SQLAlchemy async</span>
+        <span class="tag">httpx</span>
+        <span class="tag">SQLite</span>
       </div>
-      <div class="project-card reveal">
-        <div class="project-num">03 / GAMIFICATION · IN PROGRESS</div>
-        <div class="project-title">CTF Lab Platform</div>
-        <div class="project-desc">
-          Selainpohjainen CTF-harjoitusalusta 12 haasteella ja
-          pisteytysjärjestelmällä. Kattaa web-turvallisuuden perusteet
-          SQL-injektiosta JWT-väärennöksiin.
-        </div>
-        <div class="project-tags">
-          <span class="tag accent">CTF</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">Web Security</span>
-          <span class="tag">Gamification</span>
-        </div>
+
+    </a>
+
+
+    <!-- PROJECT 2 -->
+    <a href="https://github.com/NullHead87/OWASP-Toolkit"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="project-card reveal">
+
+      <div class="project-num">02 / SECURITY · TOOLING</div>
+      <div class="project-title">OWASP Security Toolkit</div>
+
+      <div class="project-desc">
+        Offline-käyttöinen, yhden HTML-tiedoston tietoturvatyökalupaketti
+        noin 20 työkalulla: hash-laskuri, enkooderi, JWT-analysaattori,
+        SQL/XSS-payload-generaattorit ja muuta.
       </div>
+
+      <div class="project-tags">
+        <span class="tag accent">HTML/CSS/JS</span>
+        <span class="tag">OWASP</span>
+        <span class="tag">Offline-first</span>
+        <span class="tag">Single-file</span>
+      </div>
+
+    </a>
+
+
+    <!-- PROJECT 3 -->
+    <a href="https://github.com/NullHead87/CTF-Lab"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="project-card reveal">
+
+      <div class="project-num">03 / GAMIFICATION · IN PROGRESS</div>
+      <div class="project-title">CTF Lab Platform</div>
+
+      <div class="project-desc">
+        Selainpohjainen CTF-harjoitusalusta 12 haasteella ja
+        pisteytysjärjestelmällä. Kattaa web-turvallisuuden perusteet
+        SQL-injektiosta JWT-väärennöksiin.
+      </div>
+
+      <div class="project-tags">
+        <span class="tag accent">CTF</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Web Security</span>
+        <span class="tag">Gamification</span>
+      </div>
+
+    </a>
+
+  </div>
+</section>
       <!-- Mini-SIEM lisätään kun valmis
       <div class="project-card reveal">
         <div class="project-num">04 / MONITORING · IN PROGRESS</div>
@@ -254,7 +286,7 @@
           tärkeintä on käytännön oppiminen ja hyvä työyhteisö.
         </p>
         <p>
-          Rakennan uraa jossa voin yhdistää <strong>tekniset taidot,
+          Rakennan uraa, jossa voin yhdistää <strong>tekniset taidot,
           ongelmanratkaisun ja jatkuvan oppimisen</strong>. <br>Laaja ICT-pohja
           antaa hyvät eväät kehittyä mihin suuntaan tahansa.
         </p>
@@ -309,7 +341,7 @@
       <h2 class="contact-tagline">Tehdään yhteistyötä.</h2>
       <p class="contact-sub">
         Olen avoin harjoittelu-, työ- ja projektitarjouksille.<br>
-        Laita viestiä - vastataan nopeasti.
+        Laita viestiä - vastaan nopeasti.
       </p>
       <div class="contact-links">
         <a href="mailto:kari.jankala@gmail.com" class="btn btn-primary">→ lähetä sähköposti</a>
