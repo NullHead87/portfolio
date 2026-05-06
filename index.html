@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kari Jänkälä — ICT-insinööri</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo"><span>~/</span>kari.portfolio</div>
+    <ul class="nav-links">
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+
+    <div class="hero-content">
+      <p class="hero-label">ICT Engineering Student · Security, Networks & Development</p>
+      <h1 class="hero-name">
+        Kari<br>
+        <span class="line2">Jänkälä<span class="accent-word">.</span></span>
+      </h1>
+      <p class="hero-desc">
+        3. vuoden ICT-insinööriopiskelija JAMKissa. 
+        <br>Rakennan osaamista laajasti ICT-alalta —
+        verkot, järjestelmät, kyberturvallisuus ja ohjelmistokehitys.
+        Haen harjoittelu- tai työpaikkaa jossa pääsen oppimaan käytännössä.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">→ projektit</a>
+        <a href="#contact" class="btn btn-ghost">ota yhteyttä</a>
+      </div>
+    </div>
+
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <div class="dot dot-r"></div>
+        <div class="dot dot-y"></div>
+        <div class="dot dot-g"></div>
+        <span class="terminal-title">kari@jamk ~ bash</span>
+      </div>
+      <div class="terminal-body">
+        <div><span class="t-prompt">❯</span> <span class="t-cmd">whoami</span></div>
+        <div class="t-out highlight">kari.jankala</div>
+        <div><span class="t-prompt">❯</span> <span class="t-cmd">cat status.txt</span></div>
+        <div class="t-out">student @ JAMK TTV24SM</div>
+        <div class="t-out highlight">etsii harjoittelu / työtä 2025</div>
+        <div><span class="t-prompt">❯</span> <span class="t-cmd">ls skills/</span></div>
+        <div class="t-out">linux/ windows/ networking/</div>
+        <div class="t-out">cybersec/ backend/ frontend/</div>
+        <div><span class="t-prompt">❯</span> <span class="t-cmd">echo $LOCATION</span></div>
+        <div class="t-out warn">Kemi · Lappi · Suomi · Remote ✓</div>
+        <div><span class="t-prompt">❯</span> <span class="t-cursor"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="reveal">
+      <p class="section-label">teknologiat & osaaminen</p>
+      <h2 class="section-title">Skills</h2>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-cell">
+        <div class="skill-cat">OS & INFRA</div>
+        <div class="skill-name">Linux — käyttö & hallinta</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cat">OS & INFRA</div>
+        <div class="skill-name">Windows — käyttö & hallinta</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cat">INFRA</div>
+        <div class="skill-name">Palvelimet & kontitus</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cat">VERKOT</div>
+        <div class="skill-name">Tietoverkot</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cat">SECURITY</div>
+        <div class="skill-name">Kyberturvallisuus</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cat">SECURITY</div>
+        <div class="skill-name">Tietoturvateknologiat</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cat">SECURITY</div>
+        <div class="skill-name">Web-sovellusten turvallisuustestaus</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cat">OHJELMOINTI</div>
+        <div class="skill-name">JavaScript</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cat">OHJELMOINTI</div>
+        <div class="skill-name">Frontend-ohjelmointi</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cat">OHJELMOINTI</div>
+        <div class="skill-name">Backend-ohjelmointi</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cat">OHJELMOINTI</div>
+        <div class="skill-name">Tietorakenteet & algoritmit</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cat">DATABASE</div>
+        <div class="skill-name">Tietokannat</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cat">DATA & AI</div>
+        <div class="skill-name">Data-analytiikka & tekoäly</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cat">INFRA</div>
+        <div class="skill-name">Tietojärjestelmät & arkkitehtuuri</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cat">VCS & AUTOMAATIO</div>
+        <div class="skill-name">Git / GitLab / Skriptaus</div>
+        <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="reveal">
+      <p class="section-label">portfolioprojektit</p>
+      <h2 class="section-title">Projects</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-num">01 / BACKEND · SECURITY</div>
+        <div class="project-title">Vulnerability Scanner API</div>
+        <div class="project-desc">
+          Asynkroninen haavoittuvuusskanneri RESTful API:lla. Skannaa URL-osoitteita,
+          tallentaa tulokset SQLite-tietokantaan ja tarjoaa historiakyselyn.
+          Rakennettu kurssiprojektina (TT00CD85-3004).
+        </div>
+        <div class="project-tags">
+          <span class="tag accent">FastAPI</span>
+          <span class="tag">Python</span>
+          <span class="tag">SQLAlchemy async</span>
+          <span class="tag">httpx</span>
+          <span class="tag">SQLite</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-num">02 / SECURITY · TOOLING</div>
+        <div class="project-title">OWASP Security Toolkit</div>
+        <div class="project-desc">
+          Offline-käyttöinen, yhden HTML-tiedoston tietoturvatyökalupaketti
+          noin 20 työkalulla: hash-laskuri, enkooderi, JWT-analysaattori,
+          SQL/XSS-payload-generaattorit ja muuta.
+        </div>
+        <div class="project-tags">
+          <span class="tag accent">HTML/CSS/JS</span>
+          <span class="tag">OWASP</span>
+          <span class="tag">Offline-first</span>
+          <span class="tag">Single-file</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-num">03 / GAMIFICATION · SECURITY</div>
+        <div class="project-title">CTF Lab Platform</div>
+        <div class="project-desc">
+          Selainpohjainen CTF-harjoitusalusta 12 haasteella ja
+          pisteytysjärjestelmällä. Kattaa web-turvallisuuden perusteet
+          SQL-injektiosta JWT-väärennöksiin.
+        </div>
+        <div class="project-tags">
+          <span class="tag accent">CTF</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Web Security</span>
+          <span class="tag">Gamification</span>
+        </div>
+      </div>
+      <!-- Mini-SIEM lisätään kun valmis
+      <div class="project-card reveal">
+        <div class="project-num">04 / MONITORING · IN PROGRESS</div>
+        <div class="project-title">Mini-SIEM System</div>
+        <div class="project-desc">
+          Kevyt SIEM-järjestelmä lokikeräyksellä, tapahtumakorrelaatiolla ja hälytyksillä.
+        </div>
+        <div class="project-tags">
+          <span class="tag accent">WIP</span>
+          <span class="tag">Python</span>
+          <span class="tag">Log Analysis</span>
+          <span class="tag">Alerting</span>
+        </div>
+      </div>
+      -->
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="reveal">
+      <p class="section-label">tausta</p>
+      <h2 class="section-title">About</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          Olen <strong>ICT-insinööriopiskelija</strong> JAMKissa (Jyväskylän
+          ammattikorkeakoulu), erikoistumisalanani kyberturvallisuus.
+          Taustanani on 120 suoritettua opintopistettä laajalta ICT-alalta.
+        </p>
+        <p>
+          Vahvuuteni kattavat koko ICT-kentän: käyttöjärjestelmähallinta (Linux & Windows),
+          palvelimet, kontitus ja tietoverkot, <strong>full-stack-kehitys</strong> sekä
+          kyberturvallisuus ja web-sovellusten turvallisuustestaus.
+          
+        </p>
+        <p>
+          Etsin <strong>harjoittelu- tai työpaikkaa</strong> Pohjois-Suomesta.
+          Lappi ja Pohjois-Pohjanmaa kiinnostavat erityisesti, mutta olen avoin
+          myös etätyölle. Minulle sopii lähes kaikki ICT-alan tehtävät;
+          tärkeintä on käytännön oppiminen ja hyvä työyhteisö.
+        </p>
+        <p>
+          Rakennan uraa jossa voin yhdistää <strong>tekniset taidot,
+          ongelmanratkaisun ja jatkuvan oppimisen</strong>. <br>Laaja ICT-pohja
+          antaa hyvät eväät kehittyä mihin suuntaan tahansa.
+        </p>
+      </div>
+      <div class="stat-list reveal">
+        <div class="stat-row">
+          <span class="stat-label">KOULUTUS</span>
+          <span class="stat-val">JAMK · ICT-insinööri (AMK)</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">RYHMÄ</span>
+          <span class="stat-val">TTV24SM</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">ERIKOISTUMINEN</span>
+          <span class="stat-val">Kyberturvallisuus</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">OPINTOPISTEET</span>
+          <span class="stat-val">120 op suoritettu</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">SIJAINTI</span>
+          <span class="stat-val">Kemi · FI</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">ALUE</span>
+          <span class="stat-val">Lappi · Pohjois-Pohjanmaa · Suomi</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">ETÄTYÖ</span>
+          <span class="stat-val">Kyllä ✓</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">TILANNE</span>
+          <span class="stat-val">Etsii harjoittelua / työpaikkaa</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">KIELET</span>
+          <span class="stat-val">FI · EN · SE</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-box reveal">
+      <p class="section-label contact-center">ota yhteyttä</p>
+      <h2 class="contact-tagline">Tehdään yhteistyötä.</h2>
+      <p class="contact-sub">
+        Olen avoin harjoittelu-, työ- ja projektitarjouksille.<br>
+        Laita viestiä - vastataan nopeasti.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:kari@example.com" class="btn btn-primary">→ lähetä sähköposti</a>
+        <a href="https://linkedin.com" class="btn btn-ghost" target="_blank">LinkedIn</a>
+        <a href="https://github.com" class="btn btn-ghost" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="footer-ascii">▓▒░ kari.portfolio ░▒▓</span>
+    <span>© 2025 · Kari Jänkälä · ICT-insinööri</span>
+    <span class="footer-school">JAMK TTV24SM</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
