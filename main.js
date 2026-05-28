@@ -1,12 +1,16 @@
 /* main.js */
 
+/**
+ * Scroll-reveal: lisää .visible-luokan elementeille
+ * kun ne tulevat näkyviin viewportissa.
+ */
 function initScrollReveal() {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
           setTimeout(() => {
-            entry.target.classList.add("visible");
+            entry.target.classList.add('visible');
           }, i * 80);
           observer.unobserve(entry.target);
         }
@@ -15,23 +19,52 @@ function initScrollReveal() {
     { threshold: 0.1 }
   );
 
-  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 }
 
+/**
+ * Skill-palkit: animoi leveyden kun skills-osio
+ * tulee näkyviin (käyttää data-width -attribuuttia).
+ */
+function initSkillBars() {
+  const skillsSection = document.getElementById('skills');
+  if (!skillsSection) return;
+
+  const barObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.skill-fill').forEach((fill) => {
+            const targetWidth = fill.getAttribute('data-width') || 0;
+            fill.style.width = targetWidth + '%';
+          });
+          barObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  barObserver.observe(skillsSection);
+}
+
+/**
+ * Aktiivinen nav-linkki: korostaa nykyisen osion
+ * navigaatiossa vierittäessä.
+ */
 function initActiveNav() {
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-links a");
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
 
   const sectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const id = entry.target.getAttribute("id");
-
+          const id = entry.target.getAttribute('id');
           navLinks.forEach((link) => {
             link.classList.toggle(
-              "active",
-              link.getAttribute("href") === "#" + id
+              'active',
+              link.getAttribute('href') === '#' + id
             );
           });
         }
@@ -42,6 +75,15 @@ function initActiveNav() {
 
   sections.forEach((section) => sectionObserver.observe(section));
 }
+
+/**
+ * Alustus kun DOM on valmis.
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  initScrollReveal();
+  initSkillBars();
+  initActiveNav();
+});
 
 const skillData = {
   documentation: {
@@ -124,72 +166,61 @@ const skillData = {
   },
   dataanalytics: {
     title: "Data-analytiikka",
-    level: 45,
+    level: 35,
     label: "Perusteet / kehittyvä osaaminen",
     text: "Olen perehtynyt data-analytiikan perusteisiin opintojen kautta. Ymmärrän datan käsittelyn, tulkinnan ja visualisoinnin perusperiaatteita sekä sen, miten analytiikkaa voidaan hyödyntää päätöksenteon ja tietojärjestelmien tukena. Kehitän osaamistani aiheessa aktiivisesti."
   },
-  windows: {
-    title: "Windows",
-    level: 60,
-    label: "Hyvä käyttötason osaaminen",
-    text: "Olen käyttänyt Windows-ympäristöjä opinnoissa, työssä ja omissa projekteissa. Hallitsen käyttöjärjestelmän peruskäytön, asetukset, tiedostorakenteet, ohjelmistojen käytön sekä yleisen vianhaun. Windows toimii minulle päivittäisenä työskentely- ja kehitysympäristönä."
+ windows: {
+   title: "Windows",
+   level: 60,
+   label: "Hyvä käyttötason osaaminen",
+   text: "Olen käyttänyt Windows-ympäristöjä opinnoissa, työssä ja omissa projekteissa. Hallitsen käyttöjärjestelmän peruskäytön, asetukset, tiedostorakenteet, ohjelmistojen käytön sekä yleisen vianhaun. Windows toimii minulle päivittäisenä työskentely- ja kehitysympäristönä."
   },
-  frontend: {
-    title: "Frontend-ohjelmointi",
-    level: 50,
-    label: "Perusteet / käytännön harjoitukset",
-    text: "Olen toteuttanut verkkosivuja ja käyttöliittymiä HTML:n, CSS:n ja JavaScriptin avulla. Osaan rakentaa responsiivisia sivurakenteita, muotoilla käyttöliittymiä ja lisätä perustoiminnallisuuksia JavaScriptillä. Oma portfolio toimii yhtenä käytännön esimerkkinä frontend-osaamisestani."
+
+ frontend: {
+   title: "Frontend-ohjelmointi",
+   level: 50,
+   label: "Perusteet / käytännön harjoitukset",
+   text: "Olen toteuttanut verkkosivuja ja käyttöliittymiä HTML:n, CSS:n ja JavaScriptin avulla. Osaan rakentaa responsiivisia sivurakenteita, muotoilla käyttöliittymiä ja lisätä perustoiminnallisuuksia JavaScriptillä. Oma portfolio toimii yhtenä käytännön esimerkkinä frontend-osaamisestani."
   },
-  backend: {
-    title: "Backend-ohjelmointi",
-    level: 50,
-    label: "Käytännön perustaso",
-    text: "Olen opiskellut backend-kehitystä ja toteuttanut harjoituksissa REST API -rajapintoja, palvelinpuolen reititystä sekä tietokantaan liittyviä toimintoja. Kokemusta on erityisesti Node.js- ja Express-ympäristöistä sekä Python/FastAPI-tyyppisistä ratkaisuista omissa projekteissa."
+
+ backend: {
+   title: "Backend-ohjelmointi",
+   level: 55,
+   label: "Käytännön perustaso",
+   text: "Olen opiskellut backend-kehitystä ja toteuttanut harjoituksissa REST API -rajapintoja, palvelinpuolen reititystä sekä tietokantaan liittyviä toimintoja. Kokemusta on erityisesti Node.js- ja Express-ympäristöistä sekä Python/FastAPI-tyyppisistä ratkaisuista omissa projekteissa."
   },
-  algorithms: {
-    title: "Tietorakenteet & algoritmit",
-    level: 45,
-    label: "Perusteet / opintojen kautta",
-    text: "Olen opiskellut tietorakenteiden ja algoritmien perusteita osana ICT-opintoja. Ymmärrän peruskäsitteitä kuten listat, taulukot, silmukat, ehdot, funktiot, hakeminen, lajittelu ja algoritmisen ajattelun merkityksen ohjelmoinnissa. Kehitän osaamista edelleen opintojen ja käytännön harjoitusten kautta."
-  }
+
+ algorithms: {
+   title: "Tietorakenteet & algoritmit",
+   level: 40,
+   label: "Perusteet / opintojen kautta",
+   text: "Olen opiskellut tietorakenteiden ja algoritmien perusteita osana ICT-opintoja. Ymmärrän peruskäsitteitä kuten listat, taulukot, silmukat, ehdot, funktiot, hakeminen, lajittelu ja algoritmisen ajattelun merkityksen ohjelmoinnissa. Kehitän osaamista edelleen opintojen ja käytännön harjoitusten kautta."
+}
 };
 
 function initSkillModal() {
   const modal = document.getElementById("skillModal");
   const closeBtn = document.getElementById("skillModalClose");
   const title = document.getElementById("skillTitle");
-  const level = document.getElementById("skillLevel");
   const label = document.getElementById("skillLabel");
   const text = document.getElementById("skillText");
-  const gaugeFill = document.querySelector(".gauge-fill");
 
-  if (!modal || !closeBtn || !gaugeFill) return;
+  if (!modal || !closeBtn) return;
 
-  const radius = 48;
-  const circumference = 2 * Math.PI * radius;
 
-  gaugeFill.style.strokeDasharray = circumference;
-  gaugeFill.style.strokeDashoffset = circumference;
+  const circumference = 2 * Math.PI * 48;
 
   function openModal(skillKey) {
     const skill = skillData[skillKey];
     if (!skill) return;
 
     title.textContent = skill.title;
-    level.textContent = skill.level;
     label.textContent = skill.label;
     text.textContent = skill.text;
 
-    const offset = circumference - (skill.level / 100) * circumference;
-
-    gaugeFill.style.strokeDashoffset = circumference;
-
     modal.classList.add("active");
     modal.setAttribute("aria-hidden", "false");
-
-    setTimeout(() => {
-      gaugeFill.style.strokeDashoffset = offset;
-    }, 80);
   }
 
   function closeModal() {
@@ -222,7 +253,5 @@ function initSkillModal() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  initScrollReveal();
-  initActiveNav();
   initSkillModal();
 });
